@@ -28,6 +28,14 @@ var myApp = angular.module('myApp',['ngRoute'])
 	  .when('/account', {
 	    templateUrl: 'views/account.html',
 	    controller: 'AccountController'
+	  })
+	   .when('/loan', {
+	    templateUrl: 'views/loan.html',
+	    controller: 'UserController'
+	  })
+	   .when('/logout', {
+	    templateUrl: 'views/logout.html',
+	    controller: 'UserController'
 	  });
 	  $locationProvider.html5Mode(true);
 });
