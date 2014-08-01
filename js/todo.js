@@ -2,7 +2,7 @@ var app = angular.module('todoList',[]);
 
 app.controller('todoCtrl',['$scope', function($scope) {
 	
-	$scope.targets = ['sethu','bose','soman'];
+	$scope.targets = ['sethu','sd','sds'];
 	
 	$scope.addTask = function() {
 		
@@ -10,3 +10,4 @@ app.controller('todoCtrl',['$scope', function($scope) {
 		$scope.task ='';
 	};
 }]);
+
