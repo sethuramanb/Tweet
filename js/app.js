@@ -10,8 +10,8 @@ var myApp = angular.module('myApp',['ngRoute'])
 }])
 
 .controller('UserController', ['$scope', function($scope) {
-	$scope.firstName ="sethu";
-	$scope.lastName ="bose";
+	$scope.firstName = 'sethuraman';
+	$scope.lastName = 'bose';
 }])
 
 .controller('AccountController', ['$scope', function($scope) {
@@ -22,20 +22,23 @@ var myApp = angular.module('myApp',['ngRoute'])
 .config(function($routeProvider, $locationProvider) {
 	  $routeProvider
 	   .when('/user', {
-	    templateUrl: 'views/user.html',
+	    templateUrl: 'app/views/user.html',
 	    controller: 'UserController'
 	  })
 	  .when('/account', {
-	    templateUrl: 'views/account.html',
+	    templateUrl: 'app/views/account.html',
 	    controller: 'AccountController'
 	  })
 	   .when('/loan', {
-	    templateUrl: 'views/loan.html',
+	    templateUrl: 'app/views/loan.html',
 	    controller: 'UserController'
 	  })
 	   .when('/logout', {
-	    templateUrl: 'views/logout.html',
+	    templateUrl: 'app/views/logout.html',
 	    controller: 'UserController'
-	  });
+	  })
+	  .otherwise({
+        redirectTo: '/'
+      });
 	  $locationProvider.html5Mode(true);
 });
